@@ -1,6 +1,6 @@
-const apiResponse = async (h, code, data) => {
+const apiResponse = async (h, code, data = null) => {
   const response = h.response({
-    status: "success",
+    status: code == 200 ? "success" : "fail",
     data,
   });
 
