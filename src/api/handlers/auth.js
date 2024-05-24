@@ -82,4 +82,10 @@ const registerHandler = async (request, h) => {
   });
 };
 
-module.exports = { loginHandler, registerHandler };
+const getUserInfo = async (request, h) => {
+  const user = request.auth.credentials;
+
+  return apiResponse(h, 200, "Berhasil mendapatkan data pengguna!", user);
+};
+
+module.exports = { loginHandler, registerHandler, getUserInfo };
