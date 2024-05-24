@@ -1,4 +1,4 @@
-const { compare } = require("../../libs/bcrypt");
+const { compare, encrypt } = require("../../libs/bcrypt");
 const { createToken } = require("../../libs/jwt");
 const prisma = require("../../libs/prisma");
 const apiResponse = require("../../utils/apiResponse");
@@ -42,6 +42,48 @@ const loginHandler = async (request, h) => {
 };
 
 // Handlers for register
-const registerHandler = (request, h) => {};
+const registerHandler = async (request, h) => {
+  const { fullname, email, password } = request.payload;
+
+  try {
+    // Cek apakah email sudah terdaftar
+    const existingUser = await prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
+
+    if (existingUser) {
+      return apiResponse(h, 400, "User already exists");
+    }
+
+    // Enkripsi password sebelum disimpan
+    const hashedPassword = await encrypt(password);
+
+    // Buat entri pengguna baru
+    const newUser = await prisma.user.create({
+      data: {
+        fullname,
+        email,
+        password: hashedPassword,
+      },
+    });
+
+    // Berhasil membuat pengguna baru
+    const token = createToken({ payload: createTokenUser(newUser) });
+
+    return apiResponse(h, 200, {
+      token,
+      user: {
+        id: newUser.id,
+        fullname: newUser.fullname,
+        email: newUser.email,
+      },
+    });
+  } catch (error) {
+    console.error("Error in registration:", error);
+    return apiResponse(h, 500, "Internal Server Error");
+  }
+};
 
 module.exports = { loginHandler, registerHandler };
