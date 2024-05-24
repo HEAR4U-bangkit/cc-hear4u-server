@@ -1,14 +1,10 @@
-const apiResponse = require("../utils/apiResponse");
+const { loginHandler } = require("./handlers/auth");
 
 const routes = [
   {
-    path: "/",
-    method: "GET",
-    handler: (request, h) => {
-      return apiResponse(h, 200, {
-        hello: "world",
-      });
-    },
+    path: "/login",
+    method: "POST",
+    handler: loginHandler,
   },
 ];
 
