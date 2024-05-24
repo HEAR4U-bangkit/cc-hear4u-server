@@ -1,3 +1,4 @@
+const APIError = require("../../errors/APIError");
 const { compare, encrypt } = require("../../libs/bcrypt");
 const { createToken } = require("../../libs/jwt");
 const prisma = require("../../libs/prisma");
@@ -6,39 +7,43 @@ const { createTokenUser } = require("../../utils/createToken");
 
 // Handlers for login
 const loginHandler = async (request, h) => {
-  const { email, password } = request.payload;
+  try {
+    const { email, password } = request.payload;
 
-  // Mencari user berdasarkan email
-  const user = await prisma.user.findFirst({
-    where: {
-      email,
-    },
-  });
+    // Mencari user berdasarkan email
+    const user = await prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
 
-  // jika tidak ada user kirim pesan error
-  if (!user) {
-    return apiResponse(h, 400);
+    // jika tidak ada user kirim pesan error
+    if (!user) {
+      throw new APIError("Email salah!");
+    }
+
+    // Mengecek password user
+    const comparePassword = await compare(password, user.password);
+
+    // jika password salah kirim error
+    if (!comparePassword) {
+      throw new APIError("Password salah!");
+    }
+
+    // membuat token untuk user
+    const token = createToken({ payload: createTokenUser(user) });
+
+    return apiResponse(h, 200, {
+      token,
+      user: {
+        id: user.id,
+        fullname: user.fullname,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    throw new Error("Internal server error!");
   }
-
-  // Mengecek password user
-  const comparePassword = await compare(password, user.password);
-
-  // jika password salah kirim error
-  if (!comparePassword) {
-    return apiResponse(h, 400);
-  }
-
-  // membuat token untuk user
-  const token = createToken({ payload: createTokenUser(user) });
-
-  return apiResponse(h, 200, {
-    token,
-    user: {
-      id: user.id,
-      fullname: user.fullname,
-      email: user.email,
-    },
-  });
 };
 
 // Handlers for register
@@ -54,7 +59,7 @@ const registerHandler = async (request, h) => {
     });
 
     if (existingUser) {
-      return apiResponse(h, 400, "User already exists");
+      throw new APIError("Pengguna sudah ada!");
     }
 
     // Enkripsi password sebelum disimpan
@@ -81,8 +86,7 @@ const registerHandler = async (request, h) => {
       },
     });
   } catch (error) {
-    console.error("Error in registration:", error);
-    return apiResponse(h, 500, "Internal Server Error");
+    throw new Error("Internal server error!");
   }
 };
 
