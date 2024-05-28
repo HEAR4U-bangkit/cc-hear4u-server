@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "node server.js",
+    "db:seed": "node prisma/seeders/index.js",
     "dev": "nodemon server.js"
   },
   "name": "capstone",
