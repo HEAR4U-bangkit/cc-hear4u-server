@@ -1,0 +1,5 @@
+services:
+  hear4u-server:
+    build: .
+    ports:
+      - "8080:8080"

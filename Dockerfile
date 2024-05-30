@@ -2,12 +2,12 @@ FROM node:18.16
 
 WORKDIR /app
 
-COPY package.json .
-
-RUN npm install
+COPY package.json package-lock.json ./
 
 COPY . .
 
-EXPOSE 8000
+RUN npm install
+
+EXPOSE 8080
 
 CMD [ "npm", "start" ]
