@@ -39,11 +39,17 @@ const routes = [
   {
     path: "/articles",
     method: "GET",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
     handler: getAllArticles,
   },
   {
     path: "/articles/{id}",
     method: "GET",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
     handler: getOneArticle,
   },
 ];
