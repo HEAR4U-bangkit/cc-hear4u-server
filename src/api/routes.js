@@ -14,7 +14,7 @@ const routes = [
     method: "GET",
     handler: (request, h) => {
       return apiResponse(h, 200, "Welcome", {
-        greet: "Hello World",
+        greet: "Hello everyone!",
       });
     },
   },
