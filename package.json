@@ -4,7 +4,7 @@
     "db:seed": "node prisma/seeders/index.js",
     "dev": "nodemon server.js"
   },
-  "name": "capstone",
+  "name": "hear4u",
   "version": "1.0.0",
   "main": "server.js",
   "devDependencies": {

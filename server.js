@@ -7,7 +7,7 @@ const apiResponse = require("./src/utils/apiResponse");
 const init = async () => {
   const server = Hapi.server({
     port: configs.port,
-    host: "localhost",
+    host: "0.0.0.0",
     routes: {
       cors: {
         origin: ["*"],
