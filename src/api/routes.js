@@ -5,6 +5,11 @@ const {
   getUserInfo,
 } = require("./handlers/auth");
 
+const {
+  getAllArticles,
+  getOneArticle,
+} = require("./handlers/artickel");
+
 const routes = [
   {
     path: "/login",
@@ -24,6 +29,16 @@ const routes = [
     },
     handler: getUserInfo,
   },
+  {
+    path: "/articles",
+    method: "GET",
+    handler: getAllArticles,
+  },
+  {
+    path: "/articles/{id}",
+    method: "GET",
+    handler: getOneArticle,
+  }
 ];
 
 module.exports = routes;
