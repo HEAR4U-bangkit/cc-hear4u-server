@@ -5,12 +5,19 @@ const {
   getUserInfo,
 } = require("./handlers/auth");
 
-const {
-  getAllArticles,
-  getOneArticle,
-} = require("./handlers/artickel");
+const { getAllArticles, getOneArticle } = require("./handlers/articles");
+const apiResponse = require("../utils/apiResponse");
 
 const routes = [
+  {
+    path: "/",
+    method: "GET",
+    handler: (request, h) => {
+      return apiResponse(h, 200, "Welcome", {
+        greet: "Hello World",
+      });
+    },
+  },
   {
     path: "/login",
     method: "POST",
@@ -38,7 +45,7 @@ const routes = [
     path: "/articles/{id}",
     method: "GET",
     handler: getOneArticle,
-  }
+  },
 ];
 
 module.exports = routes;
