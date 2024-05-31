@@ -14,7 +14,7 @@ CREATE TABLE `articles` (
     `id` VARCHAR(191) NOT NULL,
     `title` VARCHAR(191) NOT NULL,
     `thumbnail` VARCHAR(191) NOT NULL,
-    `content` VARCHAR(191) NOT NULL,
+    `content` LONGTEXT NOT NULL,
     `published_at` DATETIME(3) NOT NULL,
 
     PRIMARY KEY (`id`)

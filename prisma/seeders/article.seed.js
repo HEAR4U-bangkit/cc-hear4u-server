@@ -20,7 +20,7 @@ const articleSeed = async () => {
       title:
         "Kisah Inspiratif Nadya Andini, Penyandang Tunarungu Raih Cum Laude di ITS",
       thumbnail: "https://storage.googleapis.com/hear4u_database/its.png",
-      content: `nNadya Andini, wisudawan ITS penyandang tunarungu saat menerima ijazah dari Rektor ITS Prof Dr Ir Mochamad Ashari MEng saat prosesi wisuda ke-129 ITS di Graha Sepuluh Nopember ITS. 
+      content: `Nadya Andini, wisudawan ITS penyandang tunarungu saat menerima ijazah dari Rektor ITS Prof Dr Ir Mochamad Ashari MEng saat prosesi wisuda ke-129 ITS di Graha Sepuluh Nopember ITS. 
       \n\nWisuda ke-129 Institut Teknologi Sepuluh Nopember (ITS) Surabaya pada 21 April 2024 menjadi momen berharga bagi Nadya Andini, wisudawan penyandang tunarungu yang menyelesaikan studinya dalam 3,5 tahun dengan predikat Cum Laude. Terlahir dengan kondisi kurang dengar, Nadya membuktikan tekadnya untuk menempuh pendidikan tinggi dengan meraih IPK 3,88.
       \n\nAlat bantu dengar yang kurang efektif membuat Nadya harus merekam penjelasan dosen dan memintanya dijelaskan ulang di rumah oleh ibunya. Meskipun menghadapi kesulitan berkomunikasi dengan teman-temannya, Nadya tidak menyerah dan terus berusaha memahami materi dengan belajar mandiri.
       \n\nGadis kelahiran Pamekasan, 24 Mei 2001 ini aktif dalam berbagai kegiatan di luar akademik, termasuk perlombaan dan program magang. Dukungan dari sang ibu dan motivasi yang kuat mendorongnya untuk terus maju meski dengan segala keterbatasan.
