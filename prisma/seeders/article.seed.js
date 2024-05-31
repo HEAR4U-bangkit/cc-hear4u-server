@@ -3,8 +3,9 @@ const prisma = require("../../src/libs/prisma");
 const articleSeed = async () => {
   const articles = [
     {
-      title: "Kisah Althaf, Mahasiswa Difabel Tunarungu Selesaikan Kuliah di UGM",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/ugm.png", 
+      title:
+        "Kisah Althaf, Mahasiswa Difabel Tunarungu Selesaikan Kuliah di UGM",
+      thumbnail: "https://storage.googleapis.com/hear4u_database/ugm.png",
       content: `Hidup dengan tuli bukan menjadi halangan bagi Muhammad Erwin Althaf (24). Meski menyandang disabilitas tunarungu, Althaf berhasil menyelesaikan pendidikan tinggi. Saat ini, ia sedang menempuh Program Sarjana Ilmu Peternakan di Universitas Gadjah Mada (UGM) dan baru saja menjalani sidang pendadaran.
       \n\nPada sidang pendadaran yang berlangsung Selasa (18/9), Althaf mempresentasikan penelitian tentang "Pengaruh Penambahan Bungkil Jintan Hitam Terhadap Konsumsi dan Kecernaan Pada Domba Merino." Dengan bantuan interpreter dari Unit Kegiatan Mahasiswa (UKM) Peduli Difabel UGM, Althaf mampu menjawab pertanyaan dosen penguji melalui teks yang ditampilkan di layar.
       \n\nSelama kuliah, Althaf mendapat dukungan dari teman-temannya dan bisa memahami materi melalui power point dan tulisan di papan. Namun, ia mengakui kesulitan saat dosen tidak menyampaikan materi secara visual.
@@ -16,8 +17,9 @@ const articleSeed = async () => {
       publishedAt: new Date("2019-09-18T15:23:00Z"), // Publish at 18 September 2019, 15:23
     },
     {
-      title: "Kisah Inspiratif Nadya Andini, Penyandang Tunarungu Raih Cum Laude di ITS",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/its.png", 
+      title:
+        "Kisah Inspiratif Nadya Andini, Penyandang Tunarungu Raih Cum Laude di ITS",
+      thumbnail: "https://storage.googleapis.com/hear4u_database/its.png",
       content: `nNadya Andini, wisudawan ITS penyandang tunarungu saat menerima ijazah dari Rektor ITS Prof Dr Ir Mochamad Ashari MEng saat prosesi wisuda ke-129 ITS di Graha Sepuluh Nopember ITS. 
       \n\nWisuda ke-129 Institut Teknologi Sepuluh Nopember (ITS) Surabaya pada 21 April 2024 menjadi momen berharga bagi Nadya Andini, wisudawan penyandang tunarungu yang menyelesaikan studinya dalam 3,5 tahun dengan predikat Cum Laude. Terlahir dengan kondisi kurang dengar, Nadya membuktikan tekadnya untuk menempuh pendidikan tinggi dengan meraih IPK 3,88.
       \n\nAlat bantu dengar yang kurang efektif membuat Nadya harus merekam penjelasan dosen dan memintanya dijelaskan ulang di rumah oleh ibunya. Meskipun menghadapi kesulitan berkomunikasi dengan teman-temannya, Nadya tidak menyerah dan terus berusaha memahami materi dengan belajar mandiri.
@@ -28,7 +30,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kisah Inspiratif Haydar, Hafizh Qur'an Penyandang Tuna Rungu",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/haydar.png", 
+      thumbnail: "https://storage.googleapis.com/hear4u_database/haydar.png",
       content: `Ali Haydar Altway, meski dengan keterbatasan pendengaran dan menggunakan implan koklea, berhasil menghafal Al-Quran 30 juz. Pada 2 Juli 2020, ia menerima penghargaan dari Museum Rekor Indonesia (MURI) sebagai penyintas tuna rungu yang menghafal Al-Quran.
       \n\nHaydar adalah anak dari Ahmad Rifqy dan Nadiya asal Surabaya. Mereka sangat bangga dengan prestasi Haydar dan berharap dapat menjadi inspirasi bagi orangtua anak berkebutuhan khusus. "Tugas kita adalah berusaha sekuat tenaga untuk memberikan yang terbaik," ujar sang ayah.
       \n\nSelain menghafal Al-Quran, Haydar juga sering diminta memberikan motivasi dalam berbagai kegiatan penyandang disabilitas. Pada tahun 2019, ia dinobatkan sebagai salah satu dari 11 role model tuna rungu Indonesia dan mengikuti kongres internasional di Bali dan Jakarta.
@@ -39,7 +41,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kenapa Saya Punya Keterbatasan? Kenapa Harus Saya?",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/angie.png", 
+      thumbnail: "https://storage.googleapis.com/hear4u_database/angie.png",
       content: `Sebuah pertanyaan singkat namun sangat mendalam dari seorang gadis cilik kelas dua SD, ketika di vonis sang dokter membuat gelap seluruh dunianya. Hanya kasih sayang Orang Tua dan Keluarga di rumah yang mampu membuatnya bertahan hingga kini, meski harus setiap saat memakai alat bantu dengar.
       \n\nYa, gadis cilik itu adalah Angkie Yudistia. Seorang yang tegar hingga mampu beradaptasi dan melewati berbagai macam cobaan dalam hidup, hingga akhirnya ia menuliskan perjalanan hidupnya dalam sebuah buku "Perempuan Tuna Rungu Menembus Batas". Angkie, sapaan akrabnya yang sedari kecil bersekolah umum selalu di kucilkan oleh kawan-kawan sebayanya karena ia menderita kurang pendengaran, atau tuna rungu. Namun seiring waktu berjalan, ia dapat merubah itu semua, dari suatu keterbatasan menjadi sebuah kelebihan. "Saat duduk di bangku SD, SMP dan SMA, saya selalu jadi pusat perhatian. Sayangnya, kala itu saya tidak mendapat perhatian karena berhasil jadi artis remaja atau bintang iklan terkenal. Tetapi perhatian itu datang karena saya adalah seoragn tuna rungu, yang seringkali bicara terbata-bata dan jarang sekali merespon teguran atau bahkan panggilan orang-orang sekitar..." Ungkap Angkie dalam bukunya.
       \n\nKejujuran itu mahal harganya. Angkie yang selalu menyebutkan bahwa dirinya adalah seorang tuna rungu dalam setiap interview, kembali harus mengalami getirnya kehidupan. Berbulan-bulan ia melamar pekerjaan di berbagai tempat, selama itu juga ia telah ditolak hingga lebih dari 20 perusahaan dengan alasasan yang beragam namun pada intinya sama, mereka tidak menghargai kekurangan seseorang! Yang terlebih menyakitkan lagi adalah ketika ia ditolak mentah-mentah, ketika perusahaan yang dilamar itu mengetahui bahwa Angkie tidak dapat menggunakan fasilitas telepon... Kendati begitu, Angkie tetap berusaha, berusaha dan berusaha tanpa mengenal lelah. Ia beranggapan bahwa di tolak dari sebuah perusahaan atau dua puluh perusahaan sekalipun, tidak mengahalangi niatnya untuk mencobanya lagi. Ia selalu yakin bahwa di Indonesia ini terdapat ribuan perusahaan, dan mengenai ditolaknya ia pada saat melamar sebelumnya sama sekali tidak di ambil hati. Justru itu semua menjadi semacam motivasi yang melecut dalam diri Angkie, sampai datang sebuah kesempatan untuknya bekerja sebagai humas dari sebuah perusahaan multi nasional.
