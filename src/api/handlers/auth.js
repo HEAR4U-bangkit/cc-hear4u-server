@@ -88,4 +88,21 @@ const getUserInfo = async (request, h) => {
   return apiResponse(h, 200, "Berhasil mendapatkan data pengguna!", user);
 };
 
-module.exports = { loginHandler, registerHandler, getUserInfo };
+const updateProfile = async (request, h) => {
+  const {
+    id,
+    fullname,
+    email,
+    oldPassword,
+    newPassword,
+    confirmationPassword,
+  } = request.payload;
+
+  // find user berdasarkan id, lalu compare oldPassword dengan user.passsword
+
+  // bikin kondisi jika newPassword !== confirmationPassword, throw APIError
+
+  // update data
+};
+
+module.exports = { loginHandler, registerHandler, getUserInfo, updateProfile };
