@@ -98,11 +98,43 @@ const updateProfile = async (request, h) => {
     confirmationPassword,
   } = request.payload;
 
-  // find user berdasarkan id, lalu compare oldPassword dengan user.passsword
+  // Mencari user berdarkan id
+  const user = await prisma.user.findUnique({
+    where: { id },
+  });
 
-  // bikin kondisi jika newPassword !== confirmationPassword, throw APIError
+  if (!user) {
+    throw new APIError("Pengguna tidak ditemukan!");
+  }
 
-  // update data
+  // Membandingkan oldPassword with user.password
+  const isOldPasswordValid = await compare(oldPassword, user.password);
+  if (!isOldPasswordValid) {
+    throw new APIError("password salah!");
+  }
+
+  // Cek newPassword and confirmationPassword cocok
+  if (newPassword && newPassword !== confirmationPassword) {
+    throw new APIError("Password baru and password konfirmasi tidak cocok!");
+  }
+
+  // Encrypt new password if provided
+  let updatedData = { fullname, email };
+  if (newPassword) {
+    updatedData.password = await encrypt(newPassword);
+  }
+
+  // Update data pengguna 
+  const updatedUser = await prisma.user.update({
+    where: { id },
+    data: updatedData,
+  });
+
+  return apiResponse(h, 200, "Profil berhasil diperbarui!", {
+    id: updatedUser.id,
+    fullname: updatedUser.fullname,
+    email: updatedUser.email,
+  });
 };
 
 module.exports = { loginHandler, registerHandler, getUserInfo, updateProfile };
