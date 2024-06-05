@@ -51,7 +51,7 @@ const articleSeed = async () => {
     },
     {
       title: "Rafi Ridwan: Desainer Muda Indonesia yang Menaklukkan Dunia Mode",
-      thumbnail : "https://storage.googleapis.com/hear4u_database/rafi%20design.png",
+      thumbnail : "https://storage.googleapis.com/hear4u-storage/images/rafi%20design.png",
       content: `Rafi Abdurrahman Ridwan, yang akrab disapa Rafi Ridwan, telah menjadi sorotan dunia internasional. Di usia 14 tahun, Rafi telah mencetak prestasi gemilang sebagai perancang busana termuda di Indonesia dan dunia. Uniknya, Rafi adalah seorang penyandang tunarungu, namun hal tersebut tidak menghalanginya untuk meraih mimpi besar di dunia fashion.
       \n\nKarya-karya Rafi telah dikenakan oleh tokoh-tokoh terkenal, termasuk Tyra Banks dalam kompetisi America's Next Top Model dan Michelle Obama. Perjalanan karier Rafi dimulai sejak dini, pada ulang tahunnya yang ke-9, ia berhasil menggelar mini show berkolaborasi dengan Barli Asmara, salah satu desainer ternama Indonesia. Puncaknya, pada Jakarta Fashion Week (JFW) 2012, koleksi Rafi turut tampil di ajang fashion paling bergengsi di Tanah Air.
       \n\nPrestasi luar biasa Rafi mendapatkan perhatian khusus dari PT Telkom Indonesia (Persero) Tbk (Telkom). Pada ulang tahun Telkom yang ke-52, yang diperingati pada 6 Juli, Rafi menerima penghargaan dalam event Telkom CSR Days yang berlangsung pada 12-13 Juli 2017 di Jakarta. Telkom memberikan bantuan agar Rafi terus berkarya dan menginspirasi kaum muda.
@@ -61,7 +61,7 @@ const articleSeed = async () => {
     },
     {
       title: "Inspiratif: Kisah Aulia Difabel Netra UGM yang Menjadi Sutradara Film",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/netra.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/netra.png",
       content: `Di tengah keterbatasan yang sering dianggap sebagai hambatan, Aulia Rachmi Kurnia (24) membuktikan bahwa semangat dan tekad dapat menaklukkan segala rintangan. Sebagai penyandang disabilitas netra, Aulia berhasil mencatatkan sejumlah prestasi gemilang, baik di bidang akademis maupun non-akademis.
       \n\nPada tahun 2022, Aulia diterima di Universitas Gadjah Mada (UGM) pada Departemen Sastra Indonesia. Pada tahun 2023, ia mensutradarai film pendek berjudul "Masih Tanda Tanya", yang tayang perdana pada bulan Maret dan telah diputar di berbagai komunitas pencinta film di tanah air.
       \n\nAulia lahir dengan penglihatan normal, namun pada usia lima tahun, ia mengalami sakit parah yang menyebabkan kebutaan. Meskipun hampir 20 tahun hidup tanpa bisa melihat dunia, ia mampu memberikan warna bagi kehidupan melalui karya-karyanya.
@@ -76,7 +76,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kisah Lia Seorang Siswi dengan Semangat Tanpa Batas",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/liasiswi.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/liasiswi.png",
       content: `Bagi beberapa orang, disabilitas sering dianggap sebagai penghalang terbesar dalam meraih mimpi. Tak jarang penyandang disabilitas mengalami perundungan dan perlakuan tidak adil dari orang-orang di sekitarnya. Namun, kekurangan fisik bukan alasan untuk berdiam diri dan menjalani hidup tanpa prestasi. Penyandang disabilitas tetap bisa berkarya, berkreasi, dan membantu sesama untuk mewujudkan impian.
       \n\nNovilia, atau Lia, adalah contoh nyata dari semangat tanpa batas. Lia adalah siswi SMP Negeri 2 Muara Rupit di Kabupaten Musi Rawas Utara, Sumatera Selatan. Meskipun tidak memiliki kedua tangan yang sempurna, Lia tetap rajin belajar dengan semangat tinggi.
       \n\nLia melakukan aktivitas sehari-hari seperti biasa tanpa mengeluh sedikit pun. Meski awalnya kesulitan dengan kondisi tangannya, Lia terus berusaha untuk mandiri dan melakukan aktivitas seperti orang lain. Sejak kecil, Lia tidak memiliki kedua tangan yang sempurna, namun ketidaksempurnaan itu tidak membuatnya minder atau iri pada teman-temannya. Lia selalu mensyukuri apa yang telah diberikan Tuhan.
