@@ -23,6 +23,7 @@ const getOneArticle = async (request, h) => {
 
 const createArticle = async (request, h) => {
   const { title, thumbnail, content, publishedAt } = request.payload;
+
   const newArticle = await prisma.article.create({
     data: { title, thumbnail, content, publishedAt },
   });
@@ -33,6 +34,7 @@ const createArticle = async (request, h) => {
 const updateArticle = async (request, h) => {
   const { id } = request.params;
   const { title, thumbnail, content, publishedAt } = request.payload;
+
   const updatedArticle = await prisma.article.update({
     where: { id },
     data: { title, thumbnail, content, publishedAt },
@@ -48,4 +50,10 @@ const deleteArticle = async (request, h) => {
   return apiResponse(h, 200, "Artikel berhasil dihapus!", null);
 };
 
-module.exports = { getAllArticles, getOneArticle, createArticle, updateArticle, deleteArticle };
+module.exports = {
+  getAllArticles,
+  getOneArticle,
+  createArticle,
+  updateArticle,
+  deleteArticle,
+};
