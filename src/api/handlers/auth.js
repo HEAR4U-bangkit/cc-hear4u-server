@@ -105,6 +105,9 @@ const updateProfile = async (request, h) => {
   const checkEmail = await prisma.user.findUnique({
     where: {
       email,
+      NOT: {
+        id: user.id,
+      },
     },
   });
 
