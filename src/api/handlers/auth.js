@@ -90,13 +90,14 @@ const getUserInfo = async (request, h) => {
 
 const updateProfile = async (request, h) => {
   const {
-    id,
     fullname,
     email,
     oldPassword,
     newPassword,
     confirmationPassword,
   } = request.payload;
+
+  const { id } = request.params;
 
   // Mencari user berdarkan id
   const user = await prisma.user.findUnique({

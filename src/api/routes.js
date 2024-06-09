@@ -60,7 +60,7 @@ const routes = [
     handler: getOneArticle,
   },
   {
-    path: "/profile",
+    path: "/profile/{id}",
     method: "PUT",
     options: {
       pre: [{ method: authenticateUser, assign: "user" }],
