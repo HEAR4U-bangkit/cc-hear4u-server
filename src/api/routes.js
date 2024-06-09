@@ -4,9 +4,16 @@ const {
   registerHandler,
   getUserInfo,
   updateProfile,
+  updatePassword,
 } = require("./handlers/auth");
 
-const { getAllArticles, getOneArticle } = require("./handlers/articles");
+const {
+  getAllArticles,
+  getOneArticle,
+  createArticle,
+  updateArticle,
+  deleteArticle,
+} = require("./handlers/articles");
 const apiResponse = require("../utils/apiResponse");
 
 const routes = [
@@ -54,12 +61,44 @@ const routes = [
     handler: getOneArticle,
   },
   {
-    path: "/profile",
+    path: "/profile/{id}",
     method: "PUT",
     options: {
       pre: [{ method: authenticateUser, assign: "user" }],
     },
     handler: updateProfile,
+  },
+  {
+    path: "/password/{id}",
+    method: "PUT",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
+    handler: updatePassword,
+  },
+  {
+    path: "/articles",
+    method: "POST",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
+    handler: createArticle,
+  },
+  {
+    path: "/articles/{id}",
+    method: "PUT",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
+    handler: updateArticle,
+  },
+  {
+    path: "/articles/{id}",
+    method: "DELETE",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
+    handler: deleteArticle,
   },
 ];
 

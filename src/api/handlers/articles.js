@@ -21,4 +21,39 @@ const getOneArticle = async (request, h) => {
   return apiResponse(h, 200, "Berhasil mendapatkan artikel!", article);
 };
 
-module.exports = { getAllArticles, getOneArticle };
+const createArticle = async (request, h) => {
+  const { title, thumbnail, content, publishedAt } = request.payload;
+
+  const newArticle = await prisma.article.create({
+    data: { title, thumbnail, content, publishedAt },
+  });
+
+  return apiResponse(h, 201, "Artikel berhasil dibuat!", newArticle);
+};
+
+const updateArticle = async (request, h) => {
+  const { id } = request.params;
+  const { title, thumbnail, content, publishedAt } = request.payload;
+
+  const updatedArticle = await prisma.article.update({
+    where: { id },
+    data: { title, thumbnail, content, publishedAt },
+  });
+
+  return apiResponse(h, 200, "Artikel berhasil diperbarui!", updatedArticle);
+};
+
+const deleteArticle = async (request, h) => {
+  const { id } = request.params;
+  await prisma.article.delete({ where: { id } });
+
+  return apiResponse(h, 200, "Artikel berhasil dihapus!", null);
+};
+
+module.exports = {
+  getAllArticles,
+  getOneArticle,
+  createArticle,
+  updateArticle,
+  deleteArticle,
+};

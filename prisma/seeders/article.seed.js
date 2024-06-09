@@ -5,7 +5,7 @@ const articleSeed = async () => {
     {
       title:
         "Kisah Althaf, Mahasiswa Difabel Tunarungu Selesaikan Kuliah di UGM",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/ugm.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/ugm.png",
       content: `Hidup dengan tuli bukan menjadi halangan bagi Muhammad Erwin Althaf (24). Meski menyandang disabilitas tunarungu, Althaf berhasil menyelesaikan pendidikan tinggi. Saat ini, ia sedang menempuh Program Sarjana Ilmu Peternakan di Universitas Gadjah Mada (UGM) dan baru saja menjalani sidang pendadaran.
       \n\nPada sidang pendadaran yang berlangsung Selasa (18/9), Althaf mempresentasikan penelitian tentang "Pengaruh Penambahan Bungkil Jintan Hitam Terhadap Konsumsi dan Kecernaan Pada Domba Merino." Dengan bantuan interpreter dari Unit Kegiatan Mahasiswa (UKM) Peduli Difabel UGM, Althaf mampu menjawab pertanyaan dosen penguji melalui teks yang ditampilkan di layar.
       \n\nSelama kuliah, Althaf mendapat dukungan dari teman-temannya dan bisa memahami materi melalui power point dan tulisan di papan. Namun, ia mengakui kesulitan saat dosen tidak menyampaikan materi secara visual.
@@ -19,7 +19,7 @@ const articleSeed = async () => {
     {
       title:
         "Kisah Inspiratif Nadya Andini, Penyandang Tunarungu Raih Cum Laude di ITS",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/its.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/its.png",
       content: `Nadya Andini, wisudawan ITS penyandang tunarungu saat menerima ijazah dari Rektor ITS Prof Dr Ir Mochamad Ashari MEng saat prosesi wisuda ke-129 ITS di Graha Sepuluh Nopember ITS. 
       \n\nWisuda ke-129 Institut Teknologi Sepuluh Nopember (ITS) Surabaya pada 21 April 2024 menjadi momen berharga bagi Nadya Andini, wisudawan penyandang tunarungu yang menyelesaikan studinya dalam 3,5 tahun dengan predikat Cum Laude. Terlahir dengan kondisi kurang dengar, Nadya membuktikan tekadnya untuk menempuh pendidikan tinggi dengan meraih IPK 3,88.
       \n\nAlat bantu dengar yang kurang efektif membuat Nadya harus merekam penjelasan dosen dan memintanya dijelaskan ulang di rumah oleh ibunya. Meskipun menghadapi kesulitan berkomunikasi dengan teman-temannya, Nadya tidak menyerah dan terus berusaha memahami materi dengan belajar mandiri.
@@ -30,7 +30,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kisah Inspiratif Haydar, Hafizh Qur'an Penyandang Tuna Rungu",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/haydar.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/haydar.png",
       content: `Ali Haydar Altway, meski dengan keterbatasan pendengaran dan menggunakan implan koklea, berhasil menghafal Al-Quran 30 juz. Pada 2 Juli 2020, ia menerima penghargaan dari Museum Rekor Indonesia (MURI) sebagai penyintas tuna rungu yang menghafal Al-Quran.
       \n\nHaydar adalah anak dari Ahmad Rifqy dan Nadiya asal Surabaya. Mereka sangat bangga dengan prestasi Haydar dan berharap dapat menjadi inspirasi bagi orangtua anak berkebutuhan khusus. "Tugas kita adalah berusaha sekuat tenaga untuk memberikan yang terbaik," ujar sang ayah.
       \n\nSelain menghafal Al-Quran, Haydar juga sering diminta memberikan motivasi dalam berbagai kegiatan penyandang disabilitas. Pada tahun 2019, ia dinobatkan sebagai salah satu dari 11 role model tuna rungu Indonesia dan mengikuti kongres internasional di Bali dan Jakarta.
@@ -41,7 +41,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kenapa Saya Punya Keterbatasan? Kenapa Harus Saya?",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/angie.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/angie.png",
       content: `Sebuah pertanyaan singkat namun sangat mendalam dari seorang gadis cilik kelas dua SD, ketika di vonis sang dokter membuat gelap seluruh dunianya. Hanya kasih sayang Orang Tua dan Keluarga di rumah yang mampu membuatnya bertahan hingga kini, meski harus setiap saat memakai alat bantu dengar.
       \n\nYa, gadis cilik itu adalah Angkie Yudistia. Seorang yang tegar hingga mampu beradaptasi dan melewati berbagai macam cobaan dalam hidup, hingga akhirnya ia menuliskan perjalanan hidupnya dalam sebuah buku "Perempuan Tuna Rungu Menembus Batas". Angkie, sapaan akrabnya yang sedari kecil bersekolah umum selalu di kucilkan oleh kawan-kawan sebayanya karena ia menderita kurang pendengaran, atau tuna rungu. Namun seiring waktu berjalan, ia dapat merubah itu semua, dari suatu keterbatasan menjadi sebuah kelebihan. "Saat duduk di bangku SD, SMP dan SMA, saya selalu jadi pusat perhatian. Sayangnya, kala itu saya tidak mendapat perhatian karena berhasil jadi artis remaja atau bintang iklan terkenal. Tetapi perhatian itu datang karena saya adalah seoragn tuna rungu, yang seringkali bicara terbata-bata dan jarang sekali merespon teguran atau bahkan panggilan orang-orang sekitar..." Ungkap Angkie dalam bukunya.
       \n\nKejujuran itu mahal harganya. Angkie yang selalu menyebutkan bahwa dirinya adalah seorang tuna rungu dalam setiap interview, kembali harus mengalami getirnya kehidupan. Berbulan-bulan ia melamar pekerjaan di berbagai tempat, selama itu juga ia telah ditolak hingga lebih dari 20 perusahaan dengan alasasan yang beragam namun pada intinya sama, mereka tidak menghargai kekurangan seseorang! Yang terlebih menyakitkan lagi adalah ketika ia ditolak mentah-mentah, ketika perusahaan yang dilamar itu mengetahui bahwa Angkie tidak dapat menggunakan fasilitas telepon... Kendati begitu, Angkie tetap berusaha, berusaha dan berusaha tanpa mengenal lelah. Ia beranggapan bahwa di tolak dari sebuah perusahaan atau dua puluh perusahaan sekalipun, tidak mengahalangi niatnya untuk mencobanya lagi. Ia selalu yakin bahwa di Indonesia ini terdapat ribuan perusahaan, dan mengenai ditolaknya ia pada saat melamar sebelumnya sama sekali tidak di ambil hati. Justru itu semua menjadi semacam motivasi yang melecut dalam diri Angkie, sampai datang sebuah kesempatan untuknya bekerja sebagai humas dari sebuah perusahaan multi nasional.
@@ -51,7 +51,7 @@ const articleSeed = async () => {
     },
     {
       title: "Rafi Ridwan: Desainer Muda Indonesia yang Menaklukkan Dunia Mode",
-      thumbnail : "https://storage.googleapis.com/hear4u_database/rafi%20design.png",
+      thumbnail : "https://storage.googleapis.com/hear4u-storage/images/rafi%20design.png",
       content: `Rafi Abdurrahman Ridwan, yang akrab disapa Rafi Ridwan, telah menjadi sorotan dunia internasional. Di usia 14 tahun, Rafi telah mencetak prestasi gemilang sebagai perancang busana termuda di Indonesia dan dunia. Uniknya, Rafi adalah seorang penyandang tunarungu, namun hal tersebut tidak menghalanginya untuk meraih mimpi besar di dunia fashion.
       \n\nKarya-karya Rafi telah dikenakan oleh tokoh-tokoh terkenal, termasuk Tyra Banks dalam kompetisi America's Next Top Model dan Michelle Obama. Perjalanan karier Rafi dimulai sejak dini, pada ulang tahunnya yang ke-9, ia berhasil menggelar mini show berkolaborasi dengan Barli Asmara, salah satu desainer ternama Indonesia. Puncaknya, pada Jakarta Fashion Week (JFW) 2012, koleksi Rafi turut tampil di ajang fashion paling bergengsi di Tanah Air.
       \n\nPrestasi luar biasa Rafi mendapatkan perhatian khusus dari PT Telkom Indonesia (Persero) Tbk (Telkom). Pada ulang tahun Telkom yang ke-52, yang diperingati pada 6 Juli, Rafi menerima penghargaan dalam event Telkom CSR Days yang berlangsung pada 12-13 Juli 2017 di Jakarta. Telkom memberikan bantuan agar Rafi terus berkarya dan menginspirasi kaum muda.
@@ -61,7 +61,7 @@ const articleSeed = async () => {
     },
     {
       title: "Inspiratif: Kisah Aulia Difabel Netra UGM yang Menjadi Sutradara Film",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/netra.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/netra.png",
       content: `Di tengah keterbatasan yang sering dianggap sebagai hambatan, Aulia Rachmi Kurnia (24) membuktikan bahwa semangat dan tekad dapat menaklukkan segala rintangan. Sebagai penyandang disabilitas netra, Aulia berhasil mencatatkan sejumlah prestasi gemilang, baik di bidang akademis maupun non-akademis.
       \n\nPada tahun 2022, Aulia diterima di Universitas Gadjah Mada (UGM) pada Departemen Sastra Indonesia. Pada tahun 2023, ia mensutradarai film pendek berjudul "Masih Tanda Tanya", yang tayang perdana pada bulan Maret dan telah diputar di berbagai komunitas pencinta film di tanah air.
       \n\nAulia lahir dengan penglihatan normal, namun pada usia lima tahun, ia mengalami sakit parah yang menyebabkan kebutaan. Meskipun hampir 20 tahun hidup tanpa bisa melihat dunia, ia mampu memberikan warna bagi kehidupan melalui karya-karyanya.
@@ -76,7 +76,7 @@ const articleSeed = async () => {
     },
     {
       title: "Kisah Lia Seorang Siswi dengan Semangat Tanpa Batas",
-      thumbnail: "https://storage.googleapis.com/hear4u_database/liasiswi.png",
+      thumbnail: "https://storage.googleapis.com/hear4u-storage/images/liasiswi.png",
       content: `Bagi beberapa orang, disabilitas sering dianggap sebagai penghalang terbesar dalam meraih mimpi. Tak jarang penyandang disabilitas mengalami perundungan dan perlakuan tidak adil dari orang-orang di sekitarnya. Namun, kekurangan fisik bukan alasan untuk berdiam diri dan menjalani hidup tanpa prestasi. Penyandang disabilitas tetap bisa berkarya, berkreasi, dan membantu sesama untuk mewujudkan impian.
       \n\nNovilia, atau Lia, adalah contoh nyata dari semangat tanpa batas. Lia adalah siswi SMP Negeri 2 Muara Rupit di Kabupaten Musi Rawas Utara, Sumatera Selatan. Meskipun tidak memiliki kedua tangan yang sempurna, Lia tetap rajin belajar dengan semangat tinggi.
       \n\nLia melakukan aktivitas sehari-hari seperti biasa tanpa mengeluh sedikit pun. Meski awalnya kesulitan dengan kondisi tangannya, Lia terus berusaha untuk mandiri dan melakukan aktivitas seperti orang lain. Sejak kecil, Lia tidak memiliki kedua tangan yang sempurna, namun ketidaksempurnaan itu tidak membuatnya minder atau iri pada teman-temannya. Lia selalu mensyukuri apa yang telah diberikan Tuhan.
