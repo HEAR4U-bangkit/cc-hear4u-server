@@ -4,6 +4,7 @@ const {
   registerHandler,
   getUserInfo,
   updateProfile,
+  updatePassword,
 } = require("./handlers/auth");
 
 const {
@@ -66,6 +67,14 @@ const routes = [
       pre: [{ method: authenticateUser, assign: "user" }],
     },
     handler: updateProfile,
+  },
+  {
+    path: "/password/{id}",
+    method: "PUT",
+    options: {
+      pre: [{ method: authenticateUser, assign: "user" }],
+    },
+    handler: updatePassword,
   },
   {
     path: "/articles",
