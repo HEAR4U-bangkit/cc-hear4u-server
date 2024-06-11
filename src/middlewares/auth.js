@@ -22,6 +22,9 @@ const authenticateUser = async (request, h) => {
       where: {
         id: payload.id,
       },
+      include: {
+        role: true,
+      },
     });
 
     if (!user) {
@@ -32,6 +35,7 @@ const authenticateUser = async (request, h) => {
       id: payload.id,
       fullname: payload.fullname,
       email: payload.email,
+      role: payload.role.name,
     };
 
     return h.continue;
@@ -40,4 +44,14 @@ const authenticateUser = async (request, h) => {
   }
 };
 
-module.exports = { authenticateUser };
+const authorizeRoles = (...roles) => {
+  return (request, h) => {
+    if (!roles.includes(request.auth.credentials.role)) {
+      throw new APIError("Permission denied", 403);
+    }
+
+    return h.continue;
+  };
+};
+
+module.exports = { authenticateUser, authorizeRoles };

@@ -1,4 +1,4 @@
-const { authenticateUser } = require("../middlewares/auth");
+const { authenticateUser, authorizeRoles } = require("../middlewares/auth");
 const {
   loginHandler,
   registerHandler,
@@ -80,7 +80,10 @@ const routes = [
     path: "/articles",
     method: "POST",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: createArticle,
   },
@@ -88,7 +91,10 @@ const routes = [
     path: "/articles/{id}",
     method: "PUT",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: updateArticle,
   },
@@ -96,7 +102,10 @@ const routes = [
     path: "/articles/{id}",
     method: "DELETE",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: deleteArticle,
   },
