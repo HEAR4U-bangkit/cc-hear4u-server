@@ -31,7 +31,7 @@ const getOneUser = async (request, h) => {
   });
 
   if (!user) {
-    return new APIError(404, "User tidak ditemukan!");
+    return new APIError("User tidak ditemukan!", 404);
   }
 
   return apiResponse(h, 200, "Berhasil mendapatkan data user!", user);
@@ -54,7 +54,7 @@ const createUser = async (request, h) => {
   });
 
   if (existingUser) {
-    throw new APIError("Pengguna sudah ada!");
+    throw new APIError("Pengguna sudah ada!", 400);
   }
 
   // Enkripsi password sebelum disimpan
