@@ -31,7 +31,7 @@ const getOneUser = async (request, h) => {
   });
 
   if (!user) {
-    return APIError(404, "User tidak ditemukan!");
+    return new APIError(404, "User tidak ditemukan!");
   }
 
   return apiResponse(h, 200, "Berhasil mendapatkan data user!", user);
