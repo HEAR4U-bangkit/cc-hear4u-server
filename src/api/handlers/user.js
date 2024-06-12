@@ -28,6 +28,17 @@ const getOneUser = async (request, h) => {
     where: {
       id: id,
     },
+    select: {
+      id: true,
+      fullname: true,
+      email: true,
+      role: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
+    },
   });
 
   if (!user) {
