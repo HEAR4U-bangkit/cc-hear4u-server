@@ -5,14 +5,16 @@ const apiResponse = require("../../utils/apiResponse");
 
 const getAllUsers = async (request, h) => {
   const users = await prisma.user.findMany({
-    include: {
-      role: true,
-    },
     select: {
       id: true,
       fullname: true,
       email: true,
-      role: true,
+      role: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
     },
   });
 
@@ -66,14 +68,16 @@ const createUser = async (request, h) => {
       password: hashedPassword,
       roleId: role.id,
     },
-    include: {
-      role: true,
-    },
     select: {
       id: true,
-      email: true,
       fullname: true,
-      role: true,
+      email: true,
+      role: {
+        select: {
+          id: true,
+          name: true,
+        },
+      },
     },
   });
 
