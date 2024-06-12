@@ -1,4 +1,5 @@
 const APIError = require("../../errors/APIError");
+const { encrypt } = require("../../libs/bcrypt");
 const prisma = require("../../libs/prisma");
 const apiResponse = require("../../utils/apiResponse");
 
