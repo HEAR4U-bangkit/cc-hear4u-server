@@ -109,7 +109,7 @@ const updateProfile = async (request, h) => {
   const { id } = request.params;
 
   // Mencari user berdarkan id
-  const user = await prisma.user.findUnique({
+  const user = await prisma.user.findFirst({
     where: { id },
   });
 
@@ -117,7 +117,7 @@ const updateProfile = async (request, h) => {
     throw new APIError("Pengguna tidak ditemukan!");
   }
 
-  const checkEmail = await prisma.user.findUnique({
+  const checkEmail = await prisma.user.findFirst({
     where: {
       email,
       NOT: {
@@ -155,7 +155,7 @@ const updatePassword = async (request, h) => {
 
   const { oldPassword, newPassword, confirmationPassword } = request.payload;
 
-  const user = await prisma.user.findUnique({
+  const user = await prisma.user.findFirst({
     where: { id },
   });
 

@@ -10,7 +10,7 @@ const getAllArticles = async (request, h) => {
 const getOneArticle = async (request, h) => {
   const { id } = request.params;
 
-  const article = await prisma.article.findUnique({
+  const article = await prisma.article.findFirst({
     where: { id },
   });
 
@@ -35,7 +35,7 @@ const updateArticle = async (request, h) => {
   const { id } = request.params;
   const { title, thumbnail, content, publishedAt } = request.payload;
 
-  const article = await prisma.article.findUnique({
+  const article = await prisma.article.findFirst({
     where: { id },
   });
 
@@ -54,7 +54,7 @@ const updateArticle = async (request, h) => {
 const deleteArticle = async (request, h) => {
   const { id } = request.params;
 
-  const article = await prisma.article.findUnique({
+  const article = await prisma.article.findFirst({
     where: { id },
   });
 
