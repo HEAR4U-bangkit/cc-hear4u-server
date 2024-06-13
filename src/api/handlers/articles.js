@@ -10,7 +10,7 @@ const getAllArticles = async (request, h) => {
 const getOneArticle = async (request, h) => {
   const { id } = request.params;
 
-  const article = await prisma.article.findUnique({
+  const article = await prisma.article.findFirst({
     where: { id },
   });
 
@@ -35,6 +35,14 @@ const updateArticle = async (request, h) => {
   const { id } = request.params;
   const { title, thumbnail, content, publishedAt } = request.payload;
 
+  const article = await prisma.article.findFirst({
+    where: { id },
+  });
+
+  if (!article) {
+    return apiResponse(h, 404, "Artikel tidak ditemukan!", null);
+  }
+
   const updatedArticle = await prisma.article.update({
     where: { id },
     data: { title, thumbnail, content, publishedAt },
@@ -45,7 +53,20 @@ const updateArticle = async (request, h) => {
 
 const deleteArticle = async (request, h) => {
   const { id } = request.params;
-  await prisma.article.delete({ where: { id } });
+
+  const article = await prisma.article.findFirst({
+    where: { id },
+  });
+
+  if (!article) {
+    return apiResponse(h, 404, "Artikel tidak ditemukan!", null);
+  }
+
+  await prisma.article.delete({
+    where: {
+      id: article.id,
+    },
+  });
 
   return apiResponse(h, 200, "Artikel berhasil dihapus!", null);
 };

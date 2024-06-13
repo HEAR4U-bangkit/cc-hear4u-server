@@ -14,6 +14,9 @@ const loginHandler = async (request, h) => {
     where: {
       email,
     },
+    include: {
+      role: true,
+    },
   });
 
   // jika tidak ada user kirim pesan error
@@ -38,6 +41,7 @@ const loginHandler = async (request, h) => {
       id: user.id,
       fullname: user.fullname,
       email: user.email,
+      role: user.role,
     },
   });
 };
@@ -45,6 +49,12 @@ const loginHandler = async (request, h) => {
 // Handlers for register
 const registerHandler = async (request, h) => {
   const { fullname, email, password } = request.payload;
+
+  const role = await prisma.role.findFirst({
+    where: {
+      name: "user",
+    },
+  });
 
   // Cek apakah email sudah terdaftar
   const existingUser = await prisma.user.findFirst({
@@ -66,6 +76,10 @@ const registerHandler = async (request, h) => {
       fullname,
       email,
       password: hashedPassword,
+      roleId: role.id,
+    },
+    include: {
+      role: true,
     },
   });
 
@@ -78,6 +92,7 @@ const registerHandler = async (request, h) => {
       id: newUser.id,
       fullname: newUser.fullname,
       email: newUser.email,
+      role: newUser.role,
     },
   });
 };
@@ -94,7 +109,7 @@ const updateProfile = async (request, h) => {
   const { id } = request.params;
 
   // Mencari user berdarkan id
-  const user = await prisma.user.findUnique({
+  const user = await prisma.user.findFirst({
     where: { id },
   });
 
@@ -102,7 +117,7 @@ const updateProfile = async (request, h) => {
     throw new APIError("Pengguna tidak ditemukan!");
   }
 
-  const checkEmail = await prisma.user.findUnique({
+  const checkEmail = await prisma.user.findFirst({
     where: {
       email,
       NOT: {
@@ -122,12 +137,16 @@ const updateProfile = async (request, h) => {
       fullname,
       email,
     },
+    include: {
+      role: true,
+    },
   });
 
   return apiResponse(h, 200, "Profil berhasil diperbarui!", {
     id: updatedUser.id,
     fullname: updatedUser.fullname,
     email: updatedUser.email,
+    role: updatedUser.role,
   });
 };
 
@@ -136,7 +155,7 @@ const updatePassword = async (request, h) => {
 
   const { oldPassword, newPassword, confirmationPassword } = request.payload;
 
-  const user = await prisma.user.findUnique({
+  const user = await prisma.user.findFirst({
     where: { id },
   });
 
@@ -164,12 +183,16 @@ const updatePassword = async (request, h) => {
     data: {
       password: encryptedPassword,
     },
+    include: {
+      role: true,
+    },
   });
 
   return apiResponse(h, 200, "Password berhasil diperbarui!", {
     id: updatedUser.id,
     fullname: updatedUser.fullname,
     email: updatedUser.email,
+    role: updatedUser.role,
   });
 };
 

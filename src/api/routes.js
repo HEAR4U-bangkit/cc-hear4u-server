@@ -1,4 +1,4 @@
-const { authenticateUser } = require("../middlewares/auth");
+const { authenticateUser, authorizeRoles } = require("../middlewares/auth");
 const {
   loginHandler,
   registerHandler,
@@ -6,7 +6,6 @@ const {
   updateProfile,
   updatePassword,
 } = require("./handlers/auth");
-
 const {
   getAllArticles,
   getOneArticle,
@@ -15,6 +14,13 @@ const {
   deleteArticle,
 } = require("./handlers/articles");
 const apiResponse = require("../utils/apiResponse");
+const {
+  getAllUsers,
+  getOneUser,
+  createUser,
+  updateUser,
+  deleteUser,
+} = require("./handlers/user");
 
 const routes = [
   {
@@ -80,7 +86,10 @@ const routes = [
     path: "/articles",
     method: "POST",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: createArticle,
   },
@@ -88,7 +97,10 @@ const routes = [
     path: "/articles/{id}",
     method: "PUT",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: updateArticle,
   },
@@ -96,9 +108,67 @@ const routes = [
     path: "/articles/{id}",
     method: "DELETE",
     options: {
-      pre: [{ method: authenticateUser, assign: "user" }],
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
     },
     handler: deleteArticle,
+  },
+  {
+    path: "/users",
+    method: "GET",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: getAllUsers,
+  },
+  {
+    path: "/users/{id}",
+    method: "GET",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: getOneUser,
+  },
+  {
+    path: "/users",
+    method: "POST",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: createUser,
+  },
+  {
+    path: "/users/{id}",
+    method: "PUT",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: updateUser,
+  },
+  {
+    path: "/users/{id}",
+    method: "DELETE",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: deleteUser,
   },
 ];
 
