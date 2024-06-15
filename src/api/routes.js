@@ -21,6 +21,7 @@ const {
   updateUser,
   deleteUser,
 } = require("./handlers/user");
+const multer = require("multer");
 
 const routes = [
   {
@@ -93,12 +94,13 @@ const routes = [
       payload: {
         output: "stream",
         parse: true,
-        allow: "muiltipart/form-data",
+        allow: "multipart/form-data",
         maxBytes: 4 * 1024 * 1024,
         multipart: true,
       },
+      handler: createArticle,
     },
-    handler: createArticle,
+    handler: multer.single("thumbnail"),
   },
   {
     path: "/articles/{id}",
@@ -111,12 +113,13 @@ const routes = [
       payload: {
         output: "stream",
         parse: true,
-        allow: "muiltipart/form-data",
+        allow: "multipart/form-data",
         maxBytes: 4 * 1024 * 1024,
         multipart: true,
       },
+      handler: createArticle,
     },
-    handler: updateArticle,
+    handler: multer.single("thumbnail"),
   },
   {
     path: "/articles/{id}",
