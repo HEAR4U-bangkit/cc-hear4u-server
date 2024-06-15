@@ -24,7 +24,7 @@ const getOneArticle = async (request, h) => {
 
 const createArticle = async (request, h) => {
   const { title, content, publishedAt } = request.payload;
-  const file = require.payload.thumbnail;
+  const file = request.payload.thumbnail;
 
   if (!file) {
     return apiResponse(h, 400, "Thumbnail wajib ada!");
