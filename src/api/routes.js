@@ -21,7 +21,6 @@ const {
   updateUser,
   deleteUser,
 } = require("./handlers/user");
-const multer = require("multer");
 
 const routes = [
   {
@@ -98,9 +97,8 @@ const routes = [
         maxBytes: 4 * 1024 * 1024,
         multipart: true,
       },
-      handler: createArticle,
     },
-    handler: multer.single("thumbnail"),
+    handler: createArticle,
   },
   {
     path: "/articles/{id}",
@@ -117,9 +115,8 @@ const routes = [
         maxBytes: 4 * 1024 * 1024,
         multipart: true,
       },
-      handler: createArticle,
     },
-    handler: multer.single("thumbnail"),
+    handler: updateArticle,
   },
   {
     path: "/articles/{id}",
