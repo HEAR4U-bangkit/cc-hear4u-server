@@ -26,6 +26,7 @@ const getDashboardData = async (request, h) => {
     },
     take: 5,
     select: {
+      id: true,
       title: true,
       thumbnail: true,
       publishedAt: true,
