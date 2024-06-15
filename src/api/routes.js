@@ -21,6 +21,7 @@ const {
   updateUser,
   deleteUser,
 } = require("./handlers/user");
+const { getDashboardData } = require("./handlers/dashboard");
 
 const routes = [
   {
@@ -183,6 +184,17 @@ const routes = [
       ],
     },
     handler: deleteUser,
+  },
+  {
+    path: "/dashboard",
+    method: "GET",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: getDashboardData,
   },
 ];
 
