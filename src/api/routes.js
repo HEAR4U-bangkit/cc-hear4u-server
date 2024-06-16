@@ -21,6 +21,7 @@ const {
   updateUser,
   deleteUser,
 } = require("./handlers/user");
+const { getDashboardData } = require("./handlers/dashboard");
 
 const routes = [
   {
@@ -90,6 +91,13 @@ const routes = [
         { method: authenticateUser, assign: "user" },
         { method: authorizeRoles("admin") },
       ],
+      payload: {
+        output: "stream",
+        parse: true,
+        allow: "multipart/form-data",
+        maxBytes: 4 * 1024 * 1024,
+        multipart: true,
+      },
     },
     handler: createArticle,
   },
@@ -101,6 +109,13 @@ const routes = [
         { method: authenticateUser, assign: "user" },
         { method: authorizeRoles("admin") },
       ],
+      payload: {
+        output: "stream",
+        parse: true,
+        allow: "multipart/form-data",
+        maxBytes: 4 * 1024 * 1024,
+        multipart: true,
+      },
     },
     handler: updateArticle,
   },
@@ -169,6 +184,17 @@ const routes = [
       ],
     },
     handler: deleteUser,
+  },
+  {
+    path: "/dashboard",
+    method: "GET",
+    options: {
+      pre: [
+        { method: authenticateUser, assign: "user" },
+        { method: authorizeRoles("admin") },
+      ],
+    },
+    handler: getDashboardData,
   },
 ];
 
